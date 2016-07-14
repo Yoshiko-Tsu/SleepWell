@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyHelpView" customModule="SleepWell" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyHelpView" customModule="SleepWell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="question" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YY4-lT-fYv" userLabel="question">
+                    <rect key="frame" x="5" y="5" width="590" height="163"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="749" constant="100" id="WD5-1N-Cgq"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ym-g0-DtV" userLabel="lineView">
+                    <rect key="frame" x="10" y="173" width="580" height="2"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="BsZ-sd-Ljy"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="anser" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCb-Pl-k1J" userLabel="anser">
+                    <rect key="frame" x="5" y="180" width="590" height="800"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="800" id="leQ-uR-hCJ"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YCb-Pl-k1J" secondAttribute="bottom" constant="20" id="26A-JO-O8n"/>
+                <constraint firstItem="YY4-lT-fYv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="5eh-7M-qg5"/>
+                <constraint firstItem="YCb-Pl-k1J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="9nn-9u-6ei"/>
+                <constraint firstItem="YCb-Pl-k1J" firstAttribute="top" secondItem="6Ym-g0-DtV" secondAttribute="bottom" constant="5" id="CBw-QU-FRN"/>
+                <constraint firstItem="YY4-lT-fYv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="RLa-sY-NKk"/>
+                <constraint firstItem="6Ym-g0-DtV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="YiR-lC-QkB"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Ym-g0-DtV" secondAttribute="trailing" constant="10" id="nQG-YT-Bph"/>
+                <constraint firstItem="6Ym-g0-DtV" firstAttribute="top" secondItem="YY4-lT-fYv" secondAttribute="bottom" constant="5" id="t0I-fQ-oWr"/>
+                <constraint firstAttribute="trailing" secondItem="YCb-Pl-k1J" secondAttribute="trailing" constant="5" id="uz3-bn-fi9"/>
+                <constraint firstAttribute="trailing" secondItem="YY4-lT-fYv" secondAttribute="trailing" constant="5" id="xC0-Ba-Wv9"/>
+                <constraint firstItem="6Ym-g0-DtV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="zFv-Rq-iVi"/>
+                <constraint firstAttribute="trailing" secondItem="6Ym-g0-DtV" secondAttribute="trailing" constant="10" id="zdI-BI-aBF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="anserTextView" destination="YCb-Pl-k1J" id="zhB-aT-8r9"/>
+                <outlet property="constraint_anserBottom_viewBottom" destination="26A-JO-O8n" id="p58-j9-TxC"/>
+                <outlet property="constraint_anserHeight" destination="leQ-uR-hCJ" id="26R-YX-V8C"/>
+                <outlet property="constraint_lineBottom_anserTop" destination="CBw-QU-FRN" id="thB-5S-Lo9"/>
+                <outlet property="constraint_questioBottom_lineTop" destination="t0I-fQ-oWr" id="43L-1q-yiW"/>
+                <outlet property="constraint_questionHeight" destination="WD5-1N-Cgq" id="7sf-rX-7oE"/>
+                <outlet property="constraint_viewTop_questioTop" destination="RLa-sY-NKk" id="kUy-oy-Z6i"/>
+                <outlet property="lineView" destination="6Ym-g0-DtV" id="sOI-59-EeH"/>
+                <outlet property="questionTextView" destination="YY4-lT-fYv" id="zaA-F2-PHV"/>
+            </connections>
+        </view>
+    </objects>
+</document>
